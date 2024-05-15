@@ -11,6 +11,8 @@ const apiKey = process.env.API_KEY;
   const password=process.env.PG_PASSWORD
   const HOST=process.env.PG_HOST
   const PORT=process.env.PG_PORT
+  const cors= require('cors');
+  app.use(cors)
 
 const client=new pg.Client(`postgressql://${UserName}:${password}@${HOST}:${PORT}/${DataBase}`);
 
